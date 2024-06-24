@@ -1,16 +1,19 @@
-version: '3.8'
+version: '1.0'
 
 services:
-  app_1:
-    image: docker_demo:v1
-    container_name: docker_demo1
+  streamlit_app_1:
+    build:
+      context: ./app1
+    container_name: streamlit_app_1
     ports:
       - "8501:8501"
     command: streamlit run /app1/app.py --server.port 8501
 
   streamlit_app_2:
-    image: docker_demo:v2
-    container_name: docker_demo2
+    build:
+      context: ./app2
+    container_name: streamlit_app_2
     ports:
       - "8502:8502"
     command: streamlit run /app2/app.py --server.port 8502
+

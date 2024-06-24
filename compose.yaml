@@ -7,7 +7,7 @@ services:
     container_name: streamlit_app_1
     ports:
       - "8501:8501"
-    command: streamlit run /app1/app.py --server.port 8501
+    command: streamlit run app.py --server.port 8501
 
   streamlit_app_2:
     build:
@@ -15,5 +15,5 @@ services:
     container_name: streamlit_app_2
     ports:
       - "8502:8502"
-    command: streamlit run /app2/app.py --server.port 8502
+    command: streamlit run app.py --server.port 8502
 
